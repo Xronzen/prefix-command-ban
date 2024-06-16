@@ -10,7 +10,7 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 async def on_ready():
   print("I'm ready!")
 
-#!ban <user name> <reason>
+#!ban <@user name> <reason>
 @bot.command()
 async def ban(ctx, member:discord.Member, *args, reason="None"):
   await member.ban(reason=reason)
